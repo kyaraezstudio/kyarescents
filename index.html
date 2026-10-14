@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KYARÉ — scent, in every shade. Discover ten signature fragrances that express your personality, emotion, and identity. Luxury niche perfume house.">
+  <title>KYARÉ — scent, in every shade.</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" id="announcement">
+    <p>Discover your signature scent — KYARÉ.</p>
+    <button class="announcement-close" aria-label="Close announcement">&times;</button>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#home" class="logo">
+        <span class="logo-wordmark">KYARÉ</span>
+        <span class="logo-star">✦</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop All</a>
+        <a href="#collections">Collections</a>
+        <a href="#story">Our Story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search fragrances or notes..." autocomplete="off">
+      <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <p>Your cart is empty</p>
+        <a href="#shop" class="btn btn-outline">Explore Collection</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">Rp 0</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Checkout via WhatsApp</button>
+      <p class="cart-note">Order inquiry will open in WhatsApp. No automatic payment.</p>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-eyebrow">KYARÉ</p>
+        <h1 class="hero-title">SCENT, IN EVERY SHADE.</h1>
+        <p class="hero-subtitle">More than a fragrance. A reflection of who you are.</p>
+        <p class="hero-desc">Discover fragrances that capture your mood, express your individuality, and leave a lasting impression.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn btn-primary">Explore the Collection</a>
+          <a href="#finder" class="btn btn-outline">Discover Your Scent</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/images/hero-bottles.png" alt="KYARÉ MOSS & ROUGE" class="hero-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="hero-bottle-group" style="display:none;">
+          <div class="hero-bottle bottle-moss">
+            <div class="bottle-cap"></div>
+            <div class="bottle-body">
+              <div class="bottle-label">
+                <span class="label-brand">KYARÉ</span>
+                <span class="label-num">01</span>
+                <span class="label-name">MOSS</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-bottle bottle-rouge">
+            <div class="bottle-cap"></div>
+            <div class="bottle-body">
+              <div class="bottle-label">
+                <span class="label-brand">KYARÉ</span>
+                <span class="label-num">02</span>
+                <span class="label-name">ROUGE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-decor">
+          <div class="decor-leaf leaf-1"></div>
+          <div class="decor-leaf leaf-2"></div>
+          <div class="decor-stone"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Introduction -->
+    <section class="brand-intro">
+      <div class="container">
+        <h2 class="section-title">Ten fragrances. Ten moods. One you.</h2>
+        <p class="section-desc">Every scent tells a different story. Find the shade that feels like yours.</p>
+      </div>
+    </section>
+
+    <!-- Shop All -->
+    <section class="shop" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">The Collection</h2>
+          <div class="shop-controls">
+            <div class="filter-group">
+              <label for="categoryFilter">Filter</label>
+              <select id="categoryFilter">
+                <option value="all">All Fragrances</option>
+                <option value="fresh">Fresh & Clean</option>
+                <option value="floral">Floral & Soft</option>
+                <option value="woody">Woody & Earthy</option>
+                <option value="warm">Warm & Sweet</option>
+                <option value="bold">Bold & Mysterious</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="sortFilter">Sort</label>
+              <select id="sortFilter">
+                <option value="default">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name">Name A–Z</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections Mood -->
+    <section class="collections" id="collections">
+      <div class="container">
+        <h2 class="section-title">Collections by Mood</h2>
+        <div class="mood-grid">
+          <div class="mood-card" data-category="woody">
+            <div class="mood-visual mood-green"></div>
+            <h3>Botanical & Green</h3>
+            <p>Moss, grounded and serene.</p>
+            <a href="#shop" class="mood-link" data-filter="woody">Explore →</a>
+          </div>
+          <div class="mood-card" data-category="warm">
+            <div class="mood-visual mood-amber"></div>
+            <h3>Warm & Amber</h3>
+            <p>Sol, Ambre, Haze — radiant comfort.</p>
+            <a href="#shop" class="mood-link" data-filter="warm">Explore →</a>
+          </div>
+          <div class="mood-card" data-category="floral">
+            <div class="mood-visual mood-floral"></div>
+            <h3>Floral & Soft</h3>
+            <p>Ivory, Blush, Rouge — delicate grace.</p>
+            <a href="#shop" class="mood-link" data-filter="floral">Explore →</a>
+          </div>
+          <div class="mood-card" data-category="bold">
+            <div class="mood-visual mood-dark"></div>
+            <h3>Dark & Woody</h3>
+            <p>Iris, Noir — mysterious depth.</p>
+            <a href="#shop" class="mood-link" data-filter="bold">Explore →</a>
+          </div>
+          <div class="mood-card" data-category="fresh">
+            <div class="mood-visual mood-blue"></div>
+            <h3>Fresh & Airy</h3>
+            <p>Mist — cool morning clarity.</p>
+            <a href="#shop" class="mood-link" data-filter="fresh">Explore →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fragrance Finder Quiz -->
+    <section class="finder" id="finder">
+      <div class="container">
+        <h2 class="section-title">Which Shade Are You?</h2>
+        <p class="section-desc">Answer a few questions to discover the fragrance that matches your mood.</p>
+        <div class="quiz-container" id="quizContainer">
+          <div class="quiz-step active" data-step="1">
+            <h3>What mood are you drawn to right now?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-mood="fresh">Fresh & Clean</button>
+              <button class="quiz-option" data-mood="floral">Floral & Soft</button>
+              <button class="quiz-option" data-mood="woody">Woody & Earthy</button>
+              <button class="quiz-option" data-mood="warm">Warm & Sweet</button>
+              <button class="quiz-option" data-mood="bold">Bold & Mysterious</button>
+            </div>
+          </div>
+          <div class="quiz-result" id="quizResult" style="display:none;">
+            <h3>Your recommended shade</h3>
+            <div class="quiz-recommendation" id="quizRecommendation"></div>
+            <button class="btn btn-outline" id="quizReset">Take Quiz Again</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Story -->
+    <section class="story" id="story">
+      <div class="container story-grid">
+        <div class="story-content">
+          <h2 class="section-title">Every Scent Has a Story.</h2>
+          <p class="story-text">At KYARÉ, we believe fragrance is a language of its own. A memory, a feeling, a quiet statement of identity. Inspired by the many shades of human expression, each scent invites you to discover a different side of yourself. Because no two stories are the same, and neither should your scent be.</p>
+        </div>
+        <div class="story-visual">
+          <div class="story-image-placeholder">
+            <div class="story-bottle bottle-iris">
+              <div class="bottle-cap"></div>
+              <div class="bottle-body">
+                <div class="bottle-label">
+                  <span class="label-brand">KYARÉ</span>
+                  <span class="label-num">03</span>
+                  <span class="label-name">IRIS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Experience -->
+    <section class="values">
+      <div class="container">
+        <div class="values-grid">
+          <div class="value-card">
+            <span class="value-number">01</span>
+            <h3>Personality</h3>
+            <p>A scent that feels like you.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-number">02</span>
+            <h3>Memory</h3>
+            <p>Fragrances that stay beyond the moment.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-number">03</span>
+            <h3>Expression</h3>
+            <p>Every shade, a different story.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gift Sets -->
+    <section class="gifts" id="gifts">
+      <div class="container">
+        <h2 class="section-title">Gift Sets & Discovery</h2>
+        <p class="section-desc">Share the experience of KYARÉ with curated gift collections.</p>
+        <div class="gift-grid">
+          <div class="gift-card">
+            <div class="gift-visual gift-discovery"></div>
+            <h3>Discovery Set</h3>
+            <p>Ten 2ml samples of every shade. Perfect for finding your signature.</p>
+            <p class="gift-price">Rp 450.000</p>
+            <button class="btn btn-outline btn-sm add-gift" data-id="discovery" data-name="Discovery Set" data-price="450000">Add to Cart</button>
+          </div>
+          <div class="gift-card">
+            <div class="gift-visual gift-box"></div>
+            <h3>Signature Gift Box</h3>
+            <p>One full-size fragrance presented in a cream gift box with tissue and card.</p>
+            <p class="gift-price">From Rp 850.000</p>
+            <a href="#shop" class="btn btn-outline btn-sm">Choose Fragrance</a>
+          </div>
+          <div class="gift-card">
+            <div class="gift-visual gift-bag"></div>
+            <h3>Complete Collection</h3>
+            <p>All ten fragrances in a limited presentation set.</p>
+            <p class="gift-price">Rp 7.500.000</p>
+            <button class="btn btn-outline btn-sm add-gift" data-id="collection" data-name="Complete Collection" data-price="7500000">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <h2 class="section-title">Letters in Fragrance</h2>
+        <p class="section-desc">Be the first to discover new scents, exclusive releases, and stories from the world of KYARÉ.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-note" id="newsletterNote">This is a frontend demo. Real email collection requires a newsletter service.</p>
+        <p class="newsletter-success" id="newsletterSuccess" style="display:none;">Thank you for your interest. We'll be in touch.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-desc">We'd love to hear from you.</p>
+        <div class="contact-grid">
+          <a href="https://wa.me/6285286707303" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">💬</span>
+            <h3>WhatsApp</h3>
+            <p>085286707303</p>
+            <span class="contact-action">Chat on WhatsApp →</span>
+          </a>
+          <a href="https://www.instagram.com/zky.a4/" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">📷</span>
+            <h3>Instagram</h3>
+            <p>@zky.a4</p>
+            <span class="contact-action">Follow on Instagram →</span>
+          </a>
+          <a href="mailto:zkyaa4@gmail.com" class="contact-card">
+            <span class="contact-icon">✉️</span>
+            <h3>Email</h3>
+            <p>zkyaa4@gmail.com</p>
+            <span class="contact-action">Send an Email →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-wordmark">KYARÉ</span>
+          <span class="logo-star">✦</span>
+        </a>
+        <p class="footer-tagline">scent, in every shade.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop All</a>
+        <a href="#collections">Collections</a>
+        <a href="#story">Our Story</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="https://wa.me/6285286707303" target="_blank" rel="noopener">WhatsApp: 085286707303</a>
+        <a href="https://www.instagram.com/zky.a4/" target="_blank" rel="noopener">Instagram: @zky.a4</a>
+        <a href="mailto:zkyaa4@gmail.com">zkyaa4@gmail.com</a>
+      </div>
+      <div class="footer-legal">
+        <h4>Policies</h4>
+        <a href="#privacy" id="privacyLink">Privacy Policy</a>
+        <a href="#shipping" id="shippingLink">Shipping Policy</a>
+        <a href="#returns" id="returnsLink">Returns Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 KYARÉ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <div class="modal-content" id="modalContent">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Policy Modals -->
+  <div class="modal-overlay" id="policyModal">
+    <div class="modal modal-sm">
+      <button class="modal-close" id="policyClose" aria-label="Close">&times;</button>
+      <div class="modal-content" id="policyContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
