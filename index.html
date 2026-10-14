@@ -12,13 +12,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Announcement Bar -->
   <div class="announcement-bar" id="announcement">
     <p>Discover your signature scent — KYARÉ.</p>
     <button class="announcement-close" aria-label="Close announcement">&times;</button>
   </div>
 
-  <!-- Navigation -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
@@ -47,7 +45,6 @@
     </div>
   </header>
 
-  <!-- Search Overlay -->
   <div class="search-overlay" id="searchOverlay">
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search fragrances or notes..." autocomplete="off">
@@ -56,7 +53,6 @@
     </div>
   </div>
 
-  <!-- Cart Drawer -->
   <div class="cart-overlay" id="cartOverlay"></div>
   <aside class="cart-drawer" id="cartDrawer">
     <div class="cart-header">
@@ -80,7 +76,6 @@
   </aside>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
         <p class="hero-eyebrow">KYARÉ</p>
@@ -93,7 +88,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="assets/images/hero-bottles.png" alt="KYARÉ MOSS & ROUGE" class="hero-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <img src="hero-bottles.png" alt="KYARÉ MOSS & ROUGE" class="hero-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
         <div class="hero-bottle-group" style="display:none;">
           <div class="hero-bottle bottle-moss">
             <div class="bottle-cap"></div>
@@ -124,7 +119,6 @@
       </div>
     </section>
 
-    <!-- Brand Introduction -->
     <section class="brand-intro">
       <div class="container">
         <h2 class="section-title">Ten fragrances. Ten moods. One you.</h2>
@@ -132,7 +126,6 @@
       </div>
     </section>
 
-    <!-- Shop All -->
     <section class="shop" id="shop">
       <div class="container">
         <div class="section-header">
@@ -160,13 +153,10 @@
             </div>
           </div>
         </div>
-        <div class="product-grid" id="productGrid">
-          <!-- Products injected by JS -->
-        </div>
+        <div class="product-grid" id="productGrid"></div>
       </div>
     </section>
 
-    <!-- Collections Mood -->
     <section class="collections" id="collections">
       <div class="container">
         <h2 class="section-title">Collections by Mood</h2>
@@ -205,7 +195,6 @@
       </div>
     </section>
 
-    <!-- Fragrance Finder Quiz -->
     <section class="finder" id="finder">
       <div class="container">
         <h2 class="section-title">Which Shade Are You?</h2>
@@ -230,7 +219,6 @@
       </div>
     </section>
 
-    <!-- Brand Story -->
     <section class="story" id="story">
       <div class="container story-grid">
         <div class="story-content">
@@ -254,7 +242,6 @@
       </div>
     </section>
 
-    <!-- Signature Experience -->
     <section class="values">
       <div class="container">
         <div class="values-grid">
@@ -277,7 +264,6 @@
       </div>
     </section>
 
-    <!-- Gift Sets -->
     <section class="gifts" id="gifts">
       <div class="container">
         <h2 class="section-title">Gift Sets & Discovery</h2>
@@ -308,7 +294,6 @@
       </div>
     </section>
 
-    <!-- Newsletter -->
     <section class="newsletter">
       <div class="container">
         <h2 class="section-title">Letters in Fragrance</h2>
@@ -322,7 +307,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section class="contact" id="contact">
       <div class="container">
         <h2 class="section-title">Get in Touch</h2>
@@ -351,7 +335,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
@@ -387,17 +370,13 @@
     </div>
   </footer>
 
-  <!-- Product Detail Modal -->
   <div class="modal-overlay" id="productModal">
     <div class="modal">
       <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-      <div class="modal-content" id="modalContent">
-        <!-- Injected by JS -->
-      </div>
+      <div class="modal-content" id="modalContent"></div>
     </div>
   </div>
 
-  <!-- Policy Modals -->
   <div class="modal-overlay" id="policyModal">
     <div class="modal modal-sm">
       <button class="modal-close" id="policyClose" aria-label="Close">&times;</button>
@@ -405,10 +384,7 @@
     </div>
   </div>
 
-  <!-- Toast -->
   <div class="toast" id="toast"></div>
-
-  <!-- Back to Top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
